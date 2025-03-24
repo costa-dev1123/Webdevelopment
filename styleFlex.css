@@ -1,0 +1,134 @@
+body{
+  background: #1C1C1C;
+  display:flex;
+  flex-direction: column;
+}
+
+header h1{
+  display:flex;
+  justify-content: center;
+  border-top: 1px solid #808000;
+  border-bottom: 1px solid #808000;
+  color: #808000;
+  padding: 1%;
+}
+nav{
+  display:flex;
+  justify-content: center;
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+nav ul li {
+  list-style: none;
+  font-family: 'Brush Script MT', cursive;
+  font-size:1.5em;
+  color: #808000;
+
+}
+
+#container {
+  /* background: red; */
+  display: flex;
+
+
+}
+#sideBar {
+  width: 45%;
+  height: 100vh;
+}
+
+.description{
+  /* background: yellow;
+  color: black; */
+  /* display: flex;
+  flex-direction: column; */
+
+}
+.description h1{
+  margin:0;
+  border-bottom: 1px solid #F69300;
+  color: #F69300;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.4em;
+
+
+
+
+}
+.list{
+  display: flex;
+  flex-direction: column;
+}
+.list, .list-right {
+  list-style: none;
+  padding: 0;
+}
+.list-right{
+  /* position: relative;
+  bottom: 20px;
+  width: 50%;
+  left: 100px; */
+  display: flex;
+  flex-direction: column;
+}
+.list-left li{
+  color: #F69300;
+}
+.list-right li{
+  color: #F8E9AA;
+}
+.list-left li, .list-right li {
+  overflow: hidden;
+  padding: 1px 0;
+}
+
+.left {
+
+}
+
+.right {
+}
+
+.card-image{
+  width: 90%;
+  height: 50%;
+  margin-left: 10px;
+  border: 1px solid white;
+}
+.card-content-left{
+  width: 48%;
+  margin: 0 2px;
+  display:flex;
+}
+.card-content-right{
+  width: 48%;
+  margin: 0 2px;
+  display: flex;
+}
+.card-content{
+  background: #5F5516;
+  width: 90%;
+  height: 50%;
+  margin-left: 10px;
+  display: flex;
+
+}
+.content-left{
+  display: flex;
+  width: 100%;
+
+}
+#container > article > div > ul.list-right{
+  padding:0;
+}
+#container > article > div > ul.list-left{
+  padding:0;
+}
+
+#sideBar > article > div > div.card-content-left > ul.list-left, #sideBar > article > div > div.card-content-right > ul.list-left, #sideBar > article > div > div.card-content-left > ul.list-right, #sideBar > article > div > div.card-content-right > ul.list-right{
+  padding:0 10px;
+  font-size: smaller;
+}
