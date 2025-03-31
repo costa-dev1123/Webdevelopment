@@ -1,0 +1,89 @@
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0) skew(0deg, 0deg) rotatex(30deg) rotatey(19deg);
+    }
+
+    50% {
+        transform: scale(2) skew(45deg, -55deg) rotatex(630deg) rotatey(689deg);
+    }
+
+    100% {
+        transform: scale(1) skew(0, 0) rotatex(0) rotatey(0); 
+    }
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-container {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    bottom: 20%;
+    border: 1px solid black;
+    width: 20vw;
+    height: 60vh;
+    transition: transform 0.5s;
+    animation: bounce 2s ease 1;
+  }
+  
+  .card-container:hover {
+    transform: perspective(25vw) rotatey(180deg);
+  }
+  
+  .card-container:hover .card-front {
+    opacity: 0;
+  }
+  
+  .card-container:hover .card-back {
+    transform: perspective(25vw)  rotatey(180deg);
+    opacity: 1;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px dotted gray;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0s 0.15s;
+  }
+  
+  .card-front {
+    transform: perspective(25vw) rotatey(0deg);
+    background: lightgreen;
+    color: red;
+  }
+  
+  .card-back {
+    transform: perspective(25vw) rotatey(180deg);
+    background: red;
+    color: gold;
+    opacity: 0;
+  }
+  
+  h1, p {
+    font-size: 2.5vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    animation: pulse 0.25s infinite alternate;
+  }

@@ -1,0 +1,78 @@
+@keyframes pulsa {
+    0% {
+      transform: scale(1);
+    }
+    
+    100% { 
+      transform: scale(1.1);
+    }
+  }
+  
+  html {
+    font-size: 1.5vw;
+  }
+  
+  nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    background: #222;
+    gap: 2vw;
+    height: 3vw;
+    align-items: center;
+  }
+  
+  ul li.has-dropdown .dropdown, 
+  ul li.has-dropdown:hover .dropdown {
+    display: flex;
+    position: absolute;
+    width: 30vw;
+    left: 0;
+  }
+  
+  ul li.has-dropdown .dropdown {
+    opacity: 0;
+    top: 1vw;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    z-index: -1;
+  }
+  
+  ul li.has-dropdown:hover .dropdown {
+    opacity: 1;
+    transform: translate(0, 3vw);
+    z-index: 0;
+  }
+  
+  ul li a {
+    position: relative;
+    color: orange;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: gold;
+  }
+  
+  li:has(.active) {
+    animation: pulsa 1s linear infinite alternate;
+  }
+  
+  a div {
+    position: absolute; 
+    width: 0;
+    left: 50%;
+    height: 0.15vw;
+    background: gold;
+    transition: 0.3s ease;
+  }
+  
+  a:hover div {
+    width: 100%;
+    left: 0;
+  }
