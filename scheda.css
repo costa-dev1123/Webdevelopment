@@ -1,34 +1,25 @@
 body {
-  background: #311;
+  background: #000;
   color: white;
 }
 
-article, aside {
-    font-weight: bold;
-}
-
-aside {
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 25px darkorange;
-}
-
-aside img {
+main {
   width: 100%;
 }
 
-ul  { 
+ul { 
+  list-style: none;
   font-style: italic;
   font-weight: bold;
+  display: flex;
+  gap: 1px; 
 }
 
-
 ul li {
-  background: #ffdb55;
-  color: black;
+  background: #d6ce73;
   padding: 8px;
   box-sizing: border-box;
-  display: inline-block;
-  border-radius: 9px;
+  border-radius: 15px 15px 0 0;
 }
 
 ul li a {
@@ -36,17 +27,56 @@ ul li a {
     color: black;
 }
 
+main ul {
+  display: flex;
+}
+
 main ul li {
   background: rgba(0,0,0,0);
+  margin: auto;
 }
 
 main ul li a {
-  color: #cbdb55;
-  margin: 0vw 10vw 0vw 5vw;
+  color: #808000;
+}
+
+main .main-section {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr;
+}
+
+article, aside {
+    font-weight: bold;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 80%;;
+  height: 72vh;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 40px #a17100;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #e5d98f;
+  color: black;
+}
+
+aside img {
+  width: 50%;
+  margin: 5% auto;
+}
+
+aside .profilo {
+  display: grid;
+  row-gap: 2%;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(10, 0fr);
 }
 
 h1 {
-  color: #f82;
+  color: #808000;
   text-align: center;
 }
 
@@ -76,40 +106,44 @@ fieldset p {
   font-style: italic;
 }
 
-aside table td {
-  padding: 0 4px;
+.labelred {
+  color: #900;
 }
 
-section table td {
-  vertical-align: top;
-  padding: 4px;
-  box-sizing: border-box;
-}
-
-.tlabel {
-  color: darkred;
-}
-
-.tlabelorange {
+.labelorange {
   color: gold;
 }
 
-aside {
-  float: left;
-  padding: 20px;
-  box-sizing: border-box;
-  margin-right: 20px;
-  background: lightyellow;
-  color: black;
-}
 section h4 {
-  color: orange;
+  color: #fb0;
   font-style: italic;
 }
 
-section {
-  height: 650px;
+.profile-section {
+  height: 72vh;
   overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+section .info-ufficiali2, .dati-gioco2, .dati-non-gioco {
+  display: grid;
+  row-gap: 5%;
+  height: 40%;
+}
+
+section .info-ufficiali2 {
+  grid-template-columns: 20% 80%;
+  grid-template-rows: repeat(5, 0fr);
+}
+
+section .dati-gioco2 {
+  grid-template-columns: 20% 80%;
+  grid-template-rows: repeat(8, 0fr);
+}
+
+section .dati-non-gioco {
+  grid-template-columns: 20% 80%;
+  grid-template-rows: repeat(3, 0fr);
 }
 
 @media (max-width: 768px) {
@@ -133,3 +167,5 @@ section {
     height: auto;
   }
 }
+
+
