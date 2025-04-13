@@ -1,0 +1,49 @@
+.container {
+    border: 4px solid rgb(221, 201, 236);
+    border-radius: 9px;
+    display: grid;
+    height: 800px;
+    gap: 8px 1em;
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        "header  header header"
+        "sidebar article ."
+        "sidebar article ."
+        "footer  footer footer";
+
+}
+
+img{
+    max-width: 300px;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    color: rgba(189, 128, 128, 0.747);
+    background-color: #95d2e7;
+    text-align: center;
+    padding: 10px;
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+    background-color: rgb(62, 110, 231);
+}
+
+.article {
+    grid-area: article;
+    padding: 10px;
+}
+
+.box{
+    background-color: rgb(230, 223, 248);
+    border-radius: 6px;
+}
+
+.footer{
+    grid-area: footer;
+    text-align: center;
+    border: 4px solid rgb(152, 146, 156);
+}
