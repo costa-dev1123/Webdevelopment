@@ -1,0 +1,18 @@
+.body {
+    margin: 0 auto;
+
+}
+
+.griglia-immagini{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 15px;
+    background-color: rgb(152, 233, 233);
+}
+
+
+.griglia-immagini img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
