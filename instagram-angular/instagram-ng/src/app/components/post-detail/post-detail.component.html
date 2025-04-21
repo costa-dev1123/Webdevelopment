@@ -1,0 +1,48 @@
+<!-- <div>parametro route : {{ id() }}</div> -->
+
+<div class="card" style="width: 18rem">
+  <div class="post-header d-flex mt-2">
+    <img
+      src="https://i.pravatar.cc/300"
+      alt="immagine dell'avatar"
+      class="avatar"
+    />
+    <p class="username">{{ post()?.username }}</p>
+  </div>
+  <img [src]="post()?.imageUrl" class="card-img-top" [alt]="post()?.caption" />
+
+  <div
+    class="d-flex justify-content-between align-items-center px-2 py-2 border-top post-actions"
+  >
+    <!-- Sezione sinistra -->
+    <div class="d-flex align-items-center gap-3 post-actions-left">
+      <div class="d-flex align-items-center gap-1 likes">
+        <button class="btn p-0 border-0 bg-transparent">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <span>{{ post()?.likes }}</span>
+      </div>
+      <div class="d-flex align-items-center gap-1 comments">
+        <button class="btn p-0 border-0 bg-transparent">
+          <i class="fa-regular fa-comment"></i>
+        </button>
+        <span>30</span>
+      </div>
+      <button class="btn p-0 border-0 bg-transparent">
+        <i class="fa-regular fa-paper-plane"></i>
+      </button>
+    </div>
+
+    <!-- sezione a destra -->
+    <button class="btn p-0 border-0 bg-transparent">
+      <i class="fa-regular fa-bookmark"></i>
+    </button>
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">{{ post()?.username }}</h5>
+    <p class="card-text">
+      {{ post()?.caption }}
+    </p>
+  </div>
+</div>
