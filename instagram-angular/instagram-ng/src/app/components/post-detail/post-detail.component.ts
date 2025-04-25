@@ -1,6 +1,7 @@
-import { Component, input } from '@angular/core';
-import { Posts } from '../../models/post';
+import { Component, inject, input } from '@angular/core';
+import { Post } from '../../models/post';
 import { RouterModule } from '@angular/router';
+import { PostsService } from '../../services/posts.service';
 
 @Component({
   selector: 'app-post-detail',
@@ -9,7 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './post-detail.component.scss',
 })
 export class PostDetailComponent {
-  id = input<number>();
-
-  post = input<Posts>();
+  id = input<number>(); //id del singolo post
+  postt = input<Post>();
+  private _postsService = inject(PostsService);
+  post:Post | undefined;
+  ngOnInit(){
+    this.post = this._postsService.getPostById(this.id()!);
+  }
 }
