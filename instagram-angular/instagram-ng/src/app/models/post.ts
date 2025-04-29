@@ -1,4 +1,4 @@
-export interface Posts {
+export interface Post {
   id: number;
   imageUrl: string;
   caption: string;

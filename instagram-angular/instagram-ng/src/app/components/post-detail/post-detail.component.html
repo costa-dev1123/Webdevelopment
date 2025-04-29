@@ -7,9 +7,9 @@
       alt="immagine dell'avatar"
       class="avatar"
     />
-    <p class="username">{{ post()?.username }}</p>
+    <p class="username">{{ post?.username }}</p>
   </div>
-  <img [src]="post()?.imageUrl" class="card-img-top" [alt]="post()?.caption" />
+  <img [src]="post?.imageUrl" class="card-img-top" [alt]="post?.caption" />
 
   <div
     class="d-flex justify-content-between align-items-center px-2 py-2 border-top post-actions"
@@ -20,7 +20,7 @@
         <button class="btn p-0 border-0 bg-transparent">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <span>{{ post()?.likes }}</span>
+        <span>{{ post?.likes }}</span>
       </div>
       <div class="d-flex align-items-center gap-1 comments">
         <button class="btn p-0 border-0 bg-transparent">
@@ -40,9 +40,9 @@
   </div>
 
   <div class="card-body">
-    <h5 class="card-title">{{ post()?.username }}</h5>
+    <h5 class="card-title">{{ post?.username }}</h5>
     <p class="card-text">
-      {{ post()?.caption }}
+      {{ post?.caption }}
     </p>
   </div>
 </div>
