@@ -1,2 +1,13 @@
 <navbar />
 <router-outlet />
+
+<button (click)="postId.set(postId() + 1)">Aumenta di 1 l'id</button>
+
+<h2>rxResource</h2>
+{{ postIdResource.value()?.title }}
+
+<h2>httpResource</h2>
+{{ postHttpResource.value()?.title }}
+<div>
+  <span>id post:{{ postId() }}</span>
+</div>
