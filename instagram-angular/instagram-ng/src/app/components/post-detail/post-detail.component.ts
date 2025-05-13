@@ -1,6 +1,7 @@
 import { Component, inject, input, OnInit } from '@angular/core';
 import { Post } from '../../models/post';
 import { RouterModule } from '@angular/router';
+
 import { PostsService } from '../../services/posts.service';
 
 @Component({

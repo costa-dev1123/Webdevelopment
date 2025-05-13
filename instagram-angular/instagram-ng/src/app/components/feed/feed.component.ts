@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { Post } from '../../models/post';
 import { RouterModule } from '@angular/router';
 import { PostDetailComponent } from '../post-detail/post-detail.component';
-import { PostsService } from '../../services/posts.service';
 
 @Component({
   selector: 'app-feed',
