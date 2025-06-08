@@ -1,0 +1,139 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <h5>DATI PERSONALI</h5>
+  <hr />
+
+  <div class="coppie">
+    <div class="form-group">
+      <label for="nome"></label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        name="nome"
+        placeholder="Nome"
+        formControlName="nome"
+      />
+      @if (userForm.get('nome')?.errors?.['required'] &&
+      (userForm.get('nome')?.touched || userForm.get('nome')?.dirty)) {
+      <div style="color: red">Il campo nome è obbligatorio</div>
+      }
+    </div>
+
+    <!-- fine NOME  -->
+
+    <div class="form-group">
+      <label for="cognome"></label>
+      <input
+        type="text"
+        class="form-control"
+        id="cognome"
+        name="cognome"
+        placeholder="Cognome"
+        formControlName="cognome"
+      />
+      @if (userForm.get('cognome')?.errors?.['required'] &&
+      (userForm.get('cognome')?.touched || userForm.get('cognome')?.dirty)) {
+      <div style="color: red">Il campo cognome è obbligatorio</div>
+      }
+    </div>
+  </div>
+  <!-- fine COGNOME  -->
+
+  <div class="coppie">
+    <div class="form-group">
+      <label for="data"></label>
+      <input
+        type="date"
+        class="form-control"
+        id="data"
+        name="data"
+        placeholder="Data di Nascita"
+        formControlName="data"
+      />
+      @if (userForm.get('data')?.errors?.['underage'] &&
+      (userForm.get('data')?.touched || userForm.get('data')?.dirty)) {
+      <div style="color: red">
+        Devi avere almeno
+        {{ userForm.get('data')?.errors?.['underage']?.requiredAge }} anni
+      </div>
+      }
+    </div>
+    <!-- FINE DATA DI NASCITA -->
+
+    <div class="form-group mt-4">
+      <label for="gender"></label>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="sesso"
+          id="donna"
+          value="donna"
+        />
+        <label class="form-check-label" for="donna">Donna</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="sesso"
+          id="uomo"
+          value="uomo"
+        />
+        <label class="form-check-label" for="uomo">Uomo</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- fine RADIO BUTTON  -->
+
+  <div class="coppie">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="inputCity"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputCity"
+          placeholder="Nazione di Nascita"
+        />
+      </div>
+
+      <!-- fine NAZIONE DI NASCITA  -->
+
+      <div class="form-group">
+        <label for="inputCity"></label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Provincia di Nascita</option>
+          <option value="1">Rome</option>
+          <option value="2">Milan</option>
+          <option value="3">Naples</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- fine PROVINCIA DI NASCITA  -->
+
+    <div class="form-group">
+      <label for="codiceFiscale"></label>
+      <input
+        type="text"
+        class="form-control"
+        id="codiceFiscale"
+        name="codiceFiscale"
+        placeholder="Codice Fiscale"
+        pattern="^([A-Za-z]{6}[0-9lmnpqrstuvLMNPQRSTUV]{2}[abcdehlmprstABCDEHLMPRST]{1}[0-9lmnpqrstuvLMNPQRSTUV]{2}[A-Za-z]{1}[0-9lmnpqrstuvLMNPQRSTUV]{3}[A-Za-z]{1})$|([0-9]{11})$"
+        formControlName="codiceFiscale"
+      />
+      @if (userForm.get('codiceFiscale')?.errors?.['required'] &&
+      (userForm.get('codiceFiscale')?.touched ||
+      userForm.get('codiceFiscale')?.dirty )) {
+      <div style="color: red">Inserisci un codice fiscale valido</div>
+      }
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success d-block mx-auto">
+    Continua
+  </button>
+</form>
