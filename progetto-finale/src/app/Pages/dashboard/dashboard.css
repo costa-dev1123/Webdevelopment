@@ -12,12 +12,13 @@ grid-template-areas:"header header"
 
 header{
     grid-area: header;
-    display: flex;
+    
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
      padding: 2.5rem 2rem;
     background-color: #cbe2f8;
-    color: white;   
+    color: white;    */
 }
 
 aside{
@@ -30,11 +31,15 @@ aside{
             display: flex;
             flex-direction: column;
 
-              a {
+               a {
                 text-decoration: none;
                 margin-bottom: 2em;
-                color: #3f3f3f;
-                font-weight: 500;
+                color: #3538d4;
+                font-weight: 700;
+                border-bottom: 1px solid rgb(192, 192, 192);
+                padding-bottom: 5px;
+              
+          
               }
 
                /* &.active {
@@ -45,10 +50,10 @@ aside{
 }
 
 aside nav a:hover {
-    color: rgb(67, 141, 190);
+    color: rgb(155, 90, 240);
 }
 
-.profile-link{
+/* .profile-link{
     text-decoration: none;
     color: #252525;
     font-size: large;
@@ -60,7 +65,7 @@ aside nav a:hover {
     justify-content: space-around;
     align-items: center;
     color: #3f3f3f;
-}
+} */
 
 
 .avatar {
@@ -76,5 +81,6 @@ aside nav a:hover {
     grid-area: main;
     background-color: #f8f9fa;
     margin: 2rem;
-    height: 500px;
+    height: auto;
+    border: 1px solid rgb(226, 226, 226);
   }

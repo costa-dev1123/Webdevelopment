@@ -1,3 +1,4 @@
+
 .loginContainer{
     
     text-align: center;
@@ -6,4 +7,16 @@
 
 button{
     margin-top: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  display: inline-block;
+  font-weight: 900;
+  background: linear-gradient(90deg, #1929ff, #ac48ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+
 }

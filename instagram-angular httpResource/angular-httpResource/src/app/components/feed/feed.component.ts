@@ -1,6 +1,6 @@
 import { Component, ResourceRef } from '@angular/core';
 import { Post, User } from '../../models/post';
-import { rxResource } from '@angular/core/rxjs-interop';
+
 import { httpResource } from '@angular/common/http';
 
 @Component({

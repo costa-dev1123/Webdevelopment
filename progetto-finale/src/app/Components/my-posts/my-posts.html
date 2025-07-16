@@ -1,1 +1,69 @@
-<p>my-posts works!</p>
+<div class="container mt-4">
+  <div class="row">
+    @if(userResource.isLoading()){
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    }@else{ @for (u of userResource.value(); track $index) {
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card" style="width: 18rem">
+        <div class="post-header d-flex mt-2">
+          <img
+            src="https://i.pravatar.cc/300"
+            alt="immagine dell'avatar"
+            class="avatar"
+          />
+          <p class="username">{{ u.username }}</p>
+        </div>
+        <img
+          src="https://fastly.picsum.photos/id/43/300/300.jpg?hmac=Sm3OKu2moFYAaBOpd9SmwpJSwp54NijrGe-PZXNMBmc"
+          class="card-img-top"
+          [alt]="u.company.catchPhrase"
+        />
+
+        <div
+          class="d-flex justify-content-between align-items-center px-2 py-2 border-top post-actions"
+        >
+          <!-- Sezione sinistra -->
+          <div class="d-flex align-items-center gap-3 post-actions-left">
+            <div class="d-flex align-items-center gap-1 likes">
+              <button class="btn p-0 border-0 bg-transparent">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <span>{{ u.id }}</span>
+            </div>
+            <div class="d-flex align-items-center gap-1 comments">
+              <button class="btn p-0 border-0 bg-transparent">
+                <i class="fa-regular fa-comment"></i>
+              </button>
+              <span>30</span>
+            </div>
+            <button class="btn p-0 border-0 bg-transparent">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </div>
+
+          <!-- sezione a destra -->
+          <button class="btn p-0 border-0 bg-transparent">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">{{ u.username }}</h5>
+          <p class="card-text">{{ u.company.catchPhrase }}</p>
+          <button class="btn btn-outline-danger" (click)="deletePost(u.id)">
+            Elimina
+          </button>
+          <a href="#" class="btn btn-outline-secondary">Modifica</a>
+        </div>
+      </div>
+    </div>
+
+    } }
+
+    <!-- rimetti parentesi qui -->
+  </div>
+</div>
+
+<!-- <app-post-detail [postt]="posts[0]" [id]="1"></app-post-detail> -->
