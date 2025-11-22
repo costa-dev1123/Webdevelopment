@@ -13,4 +13,5 @@ export class FeedComponent {
   private _postsService = inject(PostsService);
 
   posts: Post[] = this._postsService.getAll();
+  postsResource: any;
 }
