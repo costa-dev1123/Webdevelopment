@@ -1,0 +1,19 @@
+<div class="dashboard">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <aside>
+    <nav>
+      <a routerLink="/dashboard/feed" routerLinkActive="active">Feed</a>
+      <a routerLink="/dashboard/myposts" routerLinkActive="active">My Posts</a>
+      <a routerLink="/dashboard/createpost" routerLinkActive="active"
+        >Create Post</a
+      >
+    </nav>
+  </aside>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

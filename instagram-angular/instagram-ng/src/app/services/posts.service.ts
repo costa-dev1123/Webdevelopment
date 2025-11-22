@@ -1,22 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../models/post';
-import { asyncPost, posts } from '../mockData/posts';
+import { posts } from '../data/posts';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostsService {
+  constructor() {}
 
-  getAllAsync():Promise<Post[]>{
-    return asyncPost;
+  getAll(): Post[] {
+    return posts; //i posts vengono dalla cartella 'DATA'
   }
 
-  getAll():Post[]{
-    return posts;
+  getPostById(id: number): Post {
+    return posts.find((p) => p.id == id)!;
   }
-
-  getPostById(id:number):Post | undefined{
-    return posts.find(p => p.id == id);
-  }
-
 }

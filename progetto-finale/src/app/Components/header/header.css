@@ -1,0 +1,62 @@
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     padding: 2.5rem 2rem;
+    background-color: #cbe2f8;
+    color: white;   
+    width: 100%;
+    margin: 0 auto;
+    height: 4rem;
+     border-bottom: 1px solid #a6cbee;
+     
+}
+
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #1929ff, #ac48ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.profile span, button {
+    text-decoration: none;
+    color: #252525;
+    font-size: large;
+    font-weight: 600;
+}
+
+.profile button {
+    margin-left: 15px;
+        transition: color 0.3s ease;
+        
+
+      &:hover {
+        background-color: #1137a1; 
+        
+
+      }
+    
+}
+
+.profile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #3f3f3f;
+}
+
+
+.avatar {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%; 
+  object-fit: cover; /* l'immagine riempia bene il contenitore */
+  margin-left: 15px; 
+  border: 2px solid white; /* bordo bianco */
+}
